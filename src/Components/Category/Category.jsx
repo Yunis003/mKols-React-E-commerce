@@ -16,8 +16,8 @@ const Category = () => {
             setTimeout(() => {
                 setCurrentIndex((prevIndex) => (prevIndex + 1) % 3);
                 setFade(true);
-            }, 1000); // Reduced to 1000ms for smoother transition
-        }, 1000); // Total time each image is shown
+            }, 100); // Reduced to 1000ms for smoother transition
+        }, 5000); // Total time each image is shown
         return () => clearInterval(interval);
     }, []);
 
@@ -38,7 +38,7 @@ const Category = () => {
                     <li>Health & Beauty</li>
                 </ul>
             </section>
-            <aside className="carousel">
+            <aside className="carousel" style={{overflow: 'hidden'}}>
                 <img
                     src={displayedImage}
                     alt="carousel"
