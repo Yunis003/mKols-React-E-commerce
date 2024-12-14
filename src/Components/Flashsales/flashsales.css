@@ -1,0 +1,145 @@
+.sales-products{
+    margin-top: 90px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.uper{
+    display: flex;
+    align-items:center;
+    gap: 15px;
+    >.red{
+        width: 17px;
+        height: 40px;
+        border-radius: 4px;
+        background-color:#DB4444;
+    }
+    >h3{
+        color:#DB4444;
+    }
+}
+
+
+.countdown {
+    display: flex;
+    align-items:center;
+    gap: 20px;
+    font-size: 1.8em;
+}
+
+.lefter{
+    margin-left: 80px;
+}
+.countdown div {
+    text-align: center;
+}
+
+.countdown span {
+    display: block;
+}
+
+.countdown .number {
+    font-weight: bold;
+}
+
+.countdown .label {
+    font-size: 0.5em;
+    color: #666;
+}
+
+.separator {
+    color: #e07a7a;
+    font-weight: bold;
+}
+.navigator{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left: 46%;
+    gap: 15px;
+
+}
+
+.products-timer{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    cursor: pointer;
+}
+.product-image{
+    width: 250px;
+    border-radius: 7px;
+    box-shadow: 0 0 2px black;
+    transition: all .2s ease-in;
+    &:hover{
+        transform: scale(1.03);
+        box-shadow: 0 0 7px #FF1E56;
+    }
+}
+
+.product-title{
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.product-sold-times{
+    color: #666;
+    font-size: 12px;
+}
+
+.price-tag {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background-color:#FF1E56; 
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px 0 0 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: rotate(-45deg);
+    transition: all .2s ease-in;
+  }
+
+  .price-tag::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .product-image:hover ~ .price-tag{
+    transform: rotate(0deg);
+}
+.view-all{
+    width: 300px;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 10px 25px;
+    background-color: #FF1E56;
+    border: none;
+    color: #FFF;
+    font-size: 15px;
+    align-self: center;
+    cursor: pointer;
+    &:hover{
+        background-color: #DB4444;
+    }
+}
