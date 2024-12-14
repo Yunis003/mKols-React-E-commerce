@@ -80,7 +80,7 @@
     border-radius: 7px;
     transition: all .2s ease-in;
     &:hover{
-        box-shadow: 0 0 7px #FF1E56;
+        box-shadow: 0 0 7px #ff003c;
     }
 }
 
@@ -99,7 +99,7 @@
     position: absolute;
     width: 50px;
     height: 25px;
-    background-color:#FF1E56; 
+    background-color:#ff003c; 
     color: white;
     font-size: 15px;
     font-weight: bold;
@@ -131,19 +131,19 @@
     margin-top: 10px;
     border-radius: 4px;
     padding: 10px 25px;
-    background-color: #FF1E56;
+    background-color: #ff003c;
     border: none;
     color: #FFF;
     font-size: 15px;
     align-self: center;
     cursor: pointer;
     &:hover{
-        background-color: #DB4444;
+        background-color: #cd0030;
     }
 }
 .add-to-card{
     position: absolute;
-    background-color: #FF1E56;
+    background-color: #ff003c;
     color: white;
     transition: all .2s ease-in;
     border-radius: 7px;

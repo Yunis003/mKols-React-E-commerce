@@ -49,3 +49,6 @@ nav ul {
     align-items:center;
     gap: 15px;
 }
+.logo{
+    filter: drop-shadow(0 0 2px #ff003c);
+}
