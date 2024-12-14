@@ -78,10 +78,8 @@
 .product-image{
     width: 250px;
     border-radius: 7px;
-    box-shadow: 0 0 2px black;
     transition: all .2s ease-in;
     &:hover{
-        transform: scale(1.03);
         box-shadow: 0 0 7px #FF1E56;
     }
 }
@@ -142,4 +140,25 @@
     &:hover{
         background-color: #DB4444;
     }
+}
+.add-to-card{
+    position: absolute;
+    background-color: #FF1E56;
+    color: white;
+    transition: all .2s ease-in;
+    border-radius: 7px;
+    width: 250px;
+    height: 30px;
+    display: none;
+    bottom: 83px;
+
+}
+.product:hover .add-to-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-to-card:hover{
+    background-color: #DB4444;
+
 }

@@ -3,6 +3,7 @@ import './App.css'
 import Category from './Components/Category/Category';
 import Header from './Components/Header/Header';
 import Flashsales from './Components/Flashsales/Flashsales';
+import Piar from './Components/Piar/Piar';
 // const Products = () => {
 //   const [products, setProducts] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -66,6 +67,7 @@ import Flashsales from './Components/Flashsales/Flashsales';
 export default function App(){
   return(
     <div className='mainContainer'>
+      <Piar/>
       <Header/>
       <Category/>
       <Flashsales/>

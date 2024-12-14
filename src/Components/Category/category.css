@@ -5,6 +5,9 @@
 }
 .navigate-store{
     width: 20%;  
+    display: flex;
+    
+    align-items: center;
     >ul{
         margin-top: 6px;
         display: flex;
@@ -13,8 +16,9 @@
         list-style: none;
     }
 }
-.navigate-store ul li{
+.navigate-store ul i{
     margin-left: 1px;
+    font-size: 22px;
     transition: all .2s ease-in;
     &:hover{
         margin-left: 5px;

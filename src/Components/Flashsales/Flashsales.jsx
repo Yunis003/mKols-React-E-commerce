@@ -110,6 +110,9 @@ const Flashsales = () => {
                 <div className="price-tag">
       <span className="tag-text">%</span>
     </div>
+    <div className="add-to-card">
+      <span>Add to card</span>
+    </div>
               <h4 className='product-title'>
                 {product.title}
               </h4>

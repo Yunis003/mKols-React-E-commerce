@@ -1,10 +1,12 @@
 import React from 'react';
 import './header.css'
+import Logo from './Logo.svg'
 const Header = () => {
     return (
         <header>
         <div className="logo-side">
-            <h3>Exclusive.</h3>
+            <img src={Logo} alt="logo" className='logo'/>
+            <span>  </span>
         </div>
         <nav>
             <ul>
