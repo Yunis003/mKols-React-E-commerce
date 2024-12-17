@@ -10,3 +10,40 @@
 .decor{
     transform: rotate(90deg);
 }
+.txt_main{
+    font-size: 30px;
+    position: relative;
+}
+.between-time{
+    position: absolute;
+    right: 170px;
+    font-size: 14px;
+    font-weight: 400;
+
+}
+.decor1, .decor2, .decor3{
+    position: absolute;
+    width: 50px;
+    transform: rotate(360deg);
+}
+.hat{
+    width: 30px;
+    left: 375px;
+    top: -2px;
+    transform: rotate(-50deg);
+}
+.ball{
+    right: 50px;
+    transform: rotate(-30deg);
+    width: 40px;
+}
+.sugarcane{
+    width: 30px;
+    right: 140px;
+}
+.lighter{
+    left: 50px;
+    transform: rotate(-10deg);
+    top: -10px;
+    width: 70px;
+}
