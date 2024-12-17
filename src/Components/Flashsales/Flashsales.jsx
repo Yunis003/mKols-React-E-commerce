@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './flashsales.css';
+import ClipLoader from 'react-spinners/ClipLoader';
 
 const Flashsales = () => {
     const [timeLeft, setTimeLeft] = useState({
@@ -57,10 +58,23 @@ const Flashsales = () => {
       })
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
+  const [showMessage, setShowMessage] = useState(false);
+  
+
+  const handleAddToFavorite = () => {
+    setShowMessage(true); // Show the message
+    // Hide the message after 3 seconds (optional)
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 3000);
+  };
 
   if (loading) {
     return (
-        <p>Please Wait..</p>
+      <>
+      <ClipLoader color="#36d7b7" size={50} />
+      <p>Loading...</p>
+      </>
     );
   }
 
@@ -111,7 +125,9 @@ const Flashsales = () => {
       <span className="tag-text">%</span>
     </div>
     <div className="add-to-card">
-      <span>Add to card</span>
+      <span onClick={()=>{
+        handleAddToFavorite()
+      }}>Add to card</span>
     </div>
               <h4 className='product-title'>
                 {product.title}
@@ -134,6 +150,20 @@ const Flashsales = () => {
                     View All
                 </button>
                 
+                {showMessage && (
+        <div
+          style={{
+            padding: "8px",
+            backgroundColor: "#ff003c",
+            borderRadius: "4px",
+            position: "absolute",
+            left: "40%",
+            color: "#fff",
+          }}
+        >
+          ✅ Product added to your favorites list!
+        </div>
+      )}
         </section>
     );
 }

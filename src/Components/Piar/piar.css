@@ -28,8 +28,8 @@
 }
 .hat{
     width: 30px;
-    left: 375px;
-    top: -2px;
+    left: -24px;
+    top: -8px;
     transform: rotate(-50deg);
 }
 .ball{
