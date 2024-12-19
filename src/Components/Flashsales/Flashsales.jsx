@@ -50,9 +50,7 @@ const Flashsales = () => {
         fetch("https://api.escuelajs.co/api/v1/products?limit=200")
       .then((response) => response.json())
       .then((data) => {
-        const filteredProducts = data.filter((product) => 
-          product.category.name.toLowerCase() !== "makeup" 
-        ).slice(15,20);
+        const filteredProducts = data.slice(0,5)
         setProducts(filteredProducts);
         setLoading(false);
       })
@@ -62,8 +60,8 @@ const Flashsales = () => {
   
 
   const handleAddToFavorite = () => {
-    setShowMessage(true); // Show the message
-    // Hide the message after 3 seconds (optional)
+    setShowMessage(true);
+
     setTimeout(() => {
       setShowMessage(false);
     }, 3000);
@@ -87,7 +85,7 @@ const Flashsales = () => {
             </div>
 
             <div className="countdown">
-                <h5>Flash Sales</h5>
+                <h3>Flash Sales</h3>
                 <div className="lefter">
                     <span className="number" id="days">{timeLeft.days}</span>
                 </div>

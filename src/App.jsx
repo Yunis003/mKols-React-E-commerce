@@ -4,6 +4,7 @@ import Category from './Components/Category/Category';
 import Header from './Components/Header/Header';
 import Flashsales from './Components/Flashsales/Flashsales';
 import Piar from './Components/Piar/Piar';
+import BrowseCategory from './Components/BrowseCategory/BrowseCategory';
 // const Products = () => {
 //   const [products, setProducts] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -71,6 +72,7 @@ export default function App(){
       <Header/>
       <Category/>
       <Flashsales/>
+      <BrowseCategory/>
     </div>
   
   )
