@@ -6,6 +6,7 @@ import Flashsales from './Components/Flashsales/Flashsales';
 import Piar from './Components/Piar/Piar';
 import BrowseCategory from './Components/BrowseCategory/BrowseCategory';
 import BestSellingProducts from './Components/BestSellingProducts/BestSellingProducts';
+import Marketing from './Components/Marketing/Marketing';
 // const Products = () => {
 //   const [products, setProducts] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -74,7 +75,8 @@ export default function App(){
       <Category/>
       <Flashsales/>
       <BrowseCategory/>
-    <BestSellingProducts/>
+      <BestSellingProducts/>
+      <Marketing/>
     </div>
   
   )
