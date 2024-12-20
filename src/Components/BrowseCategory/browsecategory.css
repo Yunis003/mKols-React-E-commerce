@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .belowCategory{
         display: flex;
         flex-direction: column;
-    gap: 60px;
+    gap: 40px;
 }
 .mainCategory{
     display: flex;
@@ -30,6 +30,6 @@
     }
     &:hover{
         transform: scale(0.9);
-        box-shadow: 0 0 5px #ff003c;
+        box-shadow: 0 0 2px #ff003c;
     }
 }
