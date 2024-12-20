@@ -135,7 +135,7 @@ const Flashsales = () => {
               <del style={{color:'#9E9E9E', fontSize:'15px'}}>$160</del>
               </div>
               <i className='product-sold-times'>
-               50+ units were sold in 24 hours
+              Exclusive Deal Just for You!
               </i>
             </div>
           ))
