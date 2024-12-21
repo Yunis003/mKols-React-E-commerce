@@ -7,6 +7,7 @@ import Piar from './Components/Piar/Piar';
 import BrowseCategory from './Components/BrowseCategory/BrowseCategory';
 import BestSellingProducts from './Components/BestSellingProducts/BestSellingProducts';
 import Marketing from './Components/Marketing/Marketing';
+import NewArrival from './Components/NewArrival/NewArrival';
 // const Products = () => {
 //   const [products, setProducts] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -77,6 +78,7 @@ export default function App(){
       <BrowseCategory/>
       <BestSellingProducts/>
       <Marketing/>
+      <NewArrival/>
     </div>
   
   )
