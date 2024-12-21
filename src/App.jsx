@@ -8,6 +8,7 @@ import BrowseCategory from './Components/BrowseCategory/BrowseCategory';
 import BestSellingProducts from './Components/BestSellingProducts/BestSellingProducts';
 import Marketing from './Components/Marketing/Marketing';
 import NewArrival from './Components/NewArrival/NewArrival';
+import Customer from './Components/Customer/Services';
 // const Products = () => {
 //   const [products, setProducts] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -79,6 +80,7 @@ export default function App(){
       <BestSellingProducts/>
       <Marketing/>
       <NewArrival/>
+      <Customer/>
     </div>
   
   )

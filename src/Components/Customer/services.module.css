@@ -1,0 +1,35 @@
+.servicesContainer{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 70px;
+}
+.freeDelivery, .quality, .secure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   
+}
+.deliveryImg, .qualityImg, .secureImg{
+background-color: black;
+border-radius: 50%;
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 70px;
+}
+
+.txts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    >span{
+        font-size: 12px;
+    }
+}
