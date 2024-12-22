@@ -27,15 +27,15 @@ const Category = () => {
         <section className="show">
             <section className="navigate-store">
                 <ul>
-                    <i>Woman's Fashion</i>
-                    <i>Men's Fashion</i>
-                    <i>Electronics</i>
-                    <i>Home & Lifestyle</i>
-                    <i>Medicine</i>
-                    <i>Sports & Outdoor</i>
-                    <i>Baby's & Toys</i>
-                    <i>Groceries & Pets</i>
-                    <i>Health & Beauty</i>
+                    <li>Woman's Fashion</li>
+                    <li>Men's Fashion</li>
+                    <li>Electronics</li>
+                    <li>Home & Lifestyle</li>
+                    <li>Medicine</li>
+                    <li>Sports & Outdoor</li>
+                    <li>Baby's & Toys</li>
+                    <li>Groceries & Pets</li>
+                    <li>Health & Beauty</li>
                 </ul>
             </section>
             <aside className="carousel" style={{overflow: 'hidden'}}>

@@ -16,7 +16,7 @@
         list-style: none;
     }
 }
-.navigate-store ul i{
+.navigate-store ul li{
     margin-left: 1px;
     font-size: 22px;
     transition: all .2s ease-in;
