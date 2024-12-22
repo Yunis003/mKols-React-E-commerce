@@ -1,0 +1,90 @@
+.aboutContainer{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    gap: 70px;
+}
+.cards{
+    width: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    position: relative;
+}
+.piarSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.leftSide{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    >h1{
+        font-size: 45px;
+    }
+}
+.deliveryImg, .qualityImg, .secureImg{
+background-color: black;
+border-radius: 50%;
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 70px;
+
+}
+
+
+.txts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    >span{
+        font-size: 12px;
+    }
+}
+.grayEllipse{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background-color: #c2c0c2;
+    top: 15px;
+    z-index: -1;
+    animation: fadeIn 2s linear infinite; 
+}
+.salesSection{
+    display: flex;
+    gap: 100px;
+}
+.cards{
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 5px;
+}
+.leaders{
+    display: flex;
+    gap: 90px;
+}
+@keyframes fadeIn{
+    0%{
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+        background-color: #777777;
+    }
+}

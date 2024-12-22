@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css'
+import { Link, NavLink, Route, Routes } from 'react-router';
 import Category from './Components/Category/Category';
 import Header from './Components/Header/Header';
 import Flashsales from './Components/Flashsales/Flashsales';
@@ -12,6 +13,7 @@ import Customer from './Components/Customer/Services';
 import Footer from './Components/Footer/Footer';
 import SignUp from './Components/SignUp/SignUp';
 import Contact from './Components/Contact/Contact';
+import About from './Components/About/About';
 // const Products = () => {
 //   const [products, setProducts] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -82,11 +84,14 @@ export default function App(){
       <BrowseCategory/>
       <BestSellingProducts/>
       <Marketing/>
-      <NewArrival/>
-      <Customer/> */}
-      <SignUp/>
+      <NewArrival/> */}
+      <About/>
+      <Customer/>
+      {/* <SignUp/> */}
       {/* <Contact/> */}
       <Footer/>
+
+      
     </div>
   
   )

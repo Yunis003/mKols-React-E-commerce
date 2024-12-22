@@ -50,7 +50,7 @@ const Flashsales = () => {
         fetch("https://api.escuelajs.co/api/v1/products?limit=200")
       .then((response) => response.json())
       .then((data) => {
-        const filteredProducts = data.slice(0,5)
+        const filteredProducts = data.slice(5,10)
         setProducts(filteredProducts);
         setLoading(false);
       })
