@@ -1,0 +1,26 @@
+.info-tab{
+    background-color: #EBF0F0;
+    width: 95%;
+    height: 540px;
+    margin: 50px auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    gap: 30px;
+    position: relative;
+}
+.info{
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.info .tab{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.info .tab h1{
+    font-size: 48px;
+}
