@@ -9,6 +9,7 @@ import BestSellingProducts from './Components/BestSellingProducts/BestSellingPro
 import Marketing from './Components/Marketing/Marketing';
 import NewArrival from './Components/NewArrival/NewArrival';
 import Customer from './Components/Customer/Services';
+import Footer from './Components/Footer/Footer';
 // const Products = () => {
 //   const [products, setProducts] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -81,6 +82,7 @@ export default function App(){
       <Marketing/>
       <NewArrival/>
       <Customer/>
+      <Footer/>
     </div>
   
   )
