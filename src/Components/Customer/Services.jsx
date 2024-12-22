@@ -7,6 +7,7 @@ const Customer = () => {
     return (
         <div className={serviceCss.servicesContainer}>
             <div className={serviceCss.freeDelivery}>
+                 <div className={serviceCss.grayEllipse}></div>
                 <img src={delivery} alt="delivery" className={serviceCss.deliveryImg}/>
                 <div className={serviceCss.txts}>
                 <h4>FREE AND FAST DELIVERY</h4>
@@ -14,6 +15,7 @@ const Customer = () => {
                 </div>
             </div>
             <div className={serviceCss.quality}>
+                <div className={serviceCss.grayEllipse}></div>
                 <img src={customer} alt="quality" className={serviceCss.qualityImg} />
                 <div className={serviceCss.txts}>
                 <h4>24/7 CUSTOMER SERVICE</h4>
@@ -21,6 +23,7 @@ const Customer = () => {
                 </div>
         </div>
         <div className={serviceCss.secure}>
+            <div className={serviceCss.grayEllipse}></div>
             <img src={secure} alt="secure"  className={serviceCss.secureImg} />
             <div className={serviceCss.txts}>
             <h4>MONEY BACK GUARANTEE</h4>
