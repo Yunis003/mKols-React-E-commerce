@@ -15,6 +15,7 @@ import SignUp from './Components/SignUp/SignUp';
 import Contact from './Components/Contact/Contact';
 import About from './Components/About/About';
 import AllProducts from './Components/AllProducts/AllProducts';
+import Main from './Components/MainAll/Main';
 // const Products = () => {
 //   const [products, setProducts] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -80,20 +81,13 @@ export default function App(){
     <div className='mainContainer'>
       <Piar/>
       <Header/>
-      <Category/>
-      <Flashsales/>
-      <BrowseCategory/>
-      <BestSellingProducts/>
-      <Marketing/>
-      <NewArrival/>
-      {/* <About/>
-      <Customer/> */}
+      {/* <Main/> */}
+      {/* <About/> */}
       {/* <SignUp/> */}
-      {/* <Contact/> */}
-      {/* <AllProducts/> */}
+      <Customer/>
+      {/* <Contact/>
+      <AllProducts/> */}
       <Footer/>
-
-      
     </div>
   
   )
