@@ -85,8 +85,8 @@ export default function App(){
       {/* <About/> */}
       {/* <SignUp/> */}
       <Customer/>
-      {/* <Contact/>
-      <AllProducts/> */}
+      {/* <Contact/> */}
+      {/* <AllProducts/> */}
       <Footer/>
     </div>
   

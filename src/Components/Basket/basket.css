@@ -1,0 +1,23 @@
+.empty-wishlist {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .empty-wishlist h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .empty-wishlist p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

@@ -35,22 +35,28 @@ nav ul {
     justify-content: center;
     align-items:center;
     gap: 30px;
-    >input{
-        background-color: rgb(239, 239, 239);
-        padding: 7px;
-        width: 200px;
-        border: none;
-        border-radius: 3px;
-        &:focus{
-            border: 1px solid #DB4444;
-        }
+    >a{
+        font-size: 25px;
+    }
+    >i{
+        cursor: pointer;
+            font-size: 25px;
     }
 }
 .lists{
     display: flex;
     justify-content: center;
     align-items:center;
-    gap: 15px;
+    gap: 25px;
+    >a{
+        font-size: 25px;
+    }
+    >i{
+        font-size: 25px;
+        transition: all .2s ease-in;
+        cursor: pointer;
+    
+    }
 }
 .logo{
     filter: drop-shadow(0 0 2px #ff003c);
