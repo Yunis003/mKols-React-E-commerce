@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './flashsales.css';
 import {Routes, Route, NavLink} from 'react-router-dom';
 import ClipLoader from 'react-spinners/ClipLoader';
-import AllProducts from '../AllProducts/AllProducts';
-import Basket from '../Basket/Basket';
 
 const Flashsales = () => {
   const [timeLeft, setTimeLeft] = useState({
