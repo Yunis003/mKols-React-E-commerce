@@ -24,3 +24,19 @@
 .info .tab h1{
     font-size: 48px;
 }
+.bot{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+ }
+ .bot button{
+     background-color: #FFF;
+     width: 185px;
+     padding: 8px 0;
+     font-size: 14px;
+     border:none;
+     border-radius:10px
+ }
+ .bot button i{
+     margin-right: 10px;
+ }

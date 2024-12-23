@@ -4,11 +4,12 @@ import './bestsellingproducts.css'
 export default function BestSellingProducts() {
     const [bestProducts, setBestProducts] = useState([]);
     const [loading2, setLoading2] = useState(true);
+    const [randomTxt, setRandomTxt] = useState('Mid Price', 'High Price', 'Low Price')
     useEffect(() => {
-        fetch("https://api.escuelajs.co/api/v1/products?limit=200")
+        fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
       .then((data) => {
-        const filteredProducts2 = data.slice(10,15)
+        const filteredProducts2 = data.slice(0,4)
         setBestProducts(filteredProducts2);
         setLoading2(false);
         console.log(bestProducts)
@@ -32,9 +33,9 @@ export default function BestSellingProducts() {
           bestProducts.map((product) => (
             <div key={product.id} className='product'>
               <img
-                src={product.images[0] || "https://via.placeholder.com/150"}
+                src={product.image || "https://via.placeholder.com/150"}
                 alt={product.title} 
-                className='product-image'
+                className='product-image2'
                 />
     <div className="add-to-card">
       <span onClick={()=>{
@@ -45,7 +46,7 @@ export default function BestSellingProducts() {
                 {product.title}
               </h4>
               <div className="priced" style={{display:'flex', gap:'7px', alignItems:'center'}}>
-              <p className='product-price' style={{color:'black'}}>${product.price} <sup style={{fontSize: "10px"}}><i style={{color:'#ff003c'}}>Mid Price</i></sup></p>
+              <p className='product-price' style={{color:'black'}}>${product.price} <sup style={{fontSize: "10px"}}><i style={{color:'#ff003c'}}>  {Math.random()*10 > 5 ? 'Mid Price' : Math.random()*10 > 2 ? 'Low Price' : 'High Price'} </i></sup></p>
               
               </div>
               <i className='product-sold-times'>

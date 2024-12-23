@@ -15,7 +15,8 @@ export default function Contact() {
             </div>
         </div>
         <div className="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97186.65974112946!2d49.8466816!3d40.4291584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d40a035a6bd%3A0xa8c2cbf267a83fbd!2zSGV5ZMmZciDGj2xpeWV2IE3JmXJryZl6aQ!5e0!3m2!1str!2saz!4v1709803344265!5m2!1str!2saz" width="660" height="450" style="border:1px solid rgb(175, 175, 175); border-radius:10px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d97140.40187884156!2d49.66715053356086!3d40.46115824451016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4030854767ac99ed%3A0x10911031a441f086!2zRlA2WCtGUkYsIFjEsXJkYWxhbg!3m2!1d40.4611863!2d49.749549099999996!5e0!3m2!1str!2saz!4v1734952251686!5m2!1str!2saz" style={{border:0, width:"800px", height:"450px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
   )

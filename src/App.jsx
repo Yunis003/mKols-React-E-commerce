@@ -14,6 +14,7 @@ import Footer from './Components/Footer/Footer';
 import SignUp from './Components/SignUp/SignUp';
 import Contact from './Components/Contact/Contact';
 import About from './Components/About/About';
+import AllProducts from './Components/AllProducts/AllProducts';
 // const Products = () => {
 //   const [products, setProducts] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -79,16 +80,17 @@ export default function App(){
     <div className='mainContainer'>
       <Piar/>
       <Header/>
-      {/* <Category/>
+      <Category/>
       <Flashsales/>
       <BrowseCategory/>
       <BestSellingProducts/>
       <Marketing/>
-      <NewArrival/> */}
-      <About/>
-      <Customer/>
+      <NewArrival/>
+      {/* <About/>
+      <Customer/> */}
       {/* <SignUp/> */}
       {/* <Contact/> */}
+      {/* <AllProducts/> */}
       <Footer/>
 
       
