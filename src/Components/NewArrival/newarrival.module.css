@@ -16,3 +16,12 @@
 .rightSide img{
     width: 660px;
 }
+@media screen and (max-width:1450px){
+   .leftSide img{
+       width: 100%;
+   }
+    .rightSide img{
+         width: 100%;
+    }
+}
+

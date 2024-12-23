@@ -35,3 +35,8 @@
         box-shadow: 0 0 5px #ff003c
     }
 }
+@media screen and (max-width:1450px){
+    .mainCategory{
+        gap: 20px;
+    }
+}
