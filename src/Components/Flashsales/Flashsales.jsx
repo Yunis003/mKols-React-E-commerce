@@ -60,17 +60,18 @@ const Flashsales = () => {
 
   const [showMessage, setShowMessage] = useState(false);
 
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const handleAddToFavorite = (e) => {
-    setSelectedProduct(e.target.parentElement.parentElement);
+  const handleAddToFavorite = (product) => {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    favorites.push(product);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
     setShowMessage(true);
+    console.log('Product added to favorites:', product);
 
     setTimeout(() => {
       setShowMessage(false);
     }, 3000);
-
-    console.log('Selected product:', selectedProduct);
   };
+
   
   if (loading) {
     return (
@@ -120,7 +121,7 @@ const Flashsales = () => {
                 <span className="tag-text">%</span>
               </div>
               <div className="add-to-card">
-                <span onClick={handleAddToFavorite}>Add to card</span>
+                <span onClick={() => handleAddToFavorite(product)}>Add to card</span>
               </div>
               <h4 className='product-title'>{product.title}</h4>
               <div className="priced" style={{ display: 'flex', gap: '7px', alignItems: 'center' }}>
