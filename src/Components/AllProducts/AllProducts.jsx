@@ -8,18 +8,20 @@ export default function AllProducts() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   useEffect(() => {
-   
-    fetch("https://fakestoreapi.com/products")
+    fetch("https://dummyjson.com/products")
       .then((response) => response.json())
       .then((data) => {
-        setAllProducts(data);
+        setAllProducts(data.products);
         setLoading(false);
       })
       .catch((error) => console.error("Error fetching products:", error));
-    fetch("https://fakestoreapi.com/products/categories")
+
+
+    fetch("https://dummyjson.com/products/categories")
       .then((response) => response.json())
       .then((data) => {
-        setCategories(["all", ...data]);
+        setCategories(data); 
+        console.log(data)
       })
       .catch((error) => console.error("Error fetching categories:", error));
   }, []);
@@ -27,7 +29,7 @@ export default function AllProducts() {
   const filteredProducts =
     selectedCategory === "all"
       ? allProducts
-      : allProducts.filter((product) => product.category === selectedCategory);
+      : allProducts.filter((product) => product.name === selectedCategory);
 
   if (loading) {
     return <p>Loading products...</p>;
@@ -38,6 +40,7 @@ export default function AllProducts() {
       <aside className={allproducts.sidebar}>
         <h3>Categories</h3>
         <ul>
+          
           {categories.map((category) => (
             <li
               key={category}
@@ -48,7 +51,7 @@ export default function AllProducts() {
               }
               onClick={() => setSelectedCategory(category)}
             >
-              {category.toUpperCase()}
+              {category.name.toUpperCase()}
             </li>
           ))}
         </ul>
@@ -59,7 +62,7 @@ export default function AllProducts() {
           filteredProducts.map((product) => (
             <div key={product.id} className={allproducts.product}>
               <img
-                src={product.image || "https://via.placeholder.com/150"}
+                src={product.images[0] || "https://via.placeholder.com/150"}
                 alt={product.title}
                 className={allproducts.image}
               />

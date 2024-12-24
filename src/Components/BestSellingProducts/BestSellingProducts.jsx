@@ -6,10 +6,12 @@ export default function BestSellingProducts() {
     const [loading2, setLoading2] = useState(true);
     const [randomTxt, setRandomTxt] = useState('Mid Price', 'High Price', 'Low Price')
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
+        fetch("https://dummyjson.com/products?products")
       .then((response) => response.json())
       .then((data) => {
-        const filteredProducts2 = data.slice(0,4)
+        const filteredProducts2 = data.products.filter(product => 
+          product.category === 'furniture' || product.category === 'electronics'
+        ).slice(0,4);
         setBestProducts(filteredProducts2);
         setLoading2(false);
         console.log(bestProducts)
@@ -33,7 +35,7 @@ export default function BestSellingProducts() {
           bestProducts.map((product) => (
             <div key={product.id} className='product'>
               <img
-                src={product.image || "https://via.placeholder.com/150"}
+                src={product.images[0] || "https://via.placeholder.com/150"}
                 alt={product.title} 
                 className='product-image2'
                 />

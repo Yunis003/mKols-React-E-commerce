@@ -48,10 +48,12 @@ const Flashsales = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch("https://api.escuelajs.co/api/v1/products")
       .then((response) => response.json())
       .then((data) => {
-        let filteredProducts = data.slice(16,21)
+        //! fake store let filteredProducts = data.slice(16,21)
+        let filteredProducts = data.slice(11,15)
+        
         setProducts(filteredProducts);
         setLoading(false);
       })
@@ -113,7 +115,7 @@ const Flashsales = () => {
           products.map((product) => (
             <div key={product.id} className='product'>
               <img
-                src={product.image || "https://via.placeholder.com/150"}
+                src={product.images[0] || "https://i.imgur.com/4lTaHfF.jpeg"}
                 alt={product.title}
                 className='product-image'
               />
