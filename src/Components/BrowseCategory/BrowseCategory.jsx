@@ -6,6 +6,9 @@ import smartwatch from './img/Category-SmartWatch.svg';
 import camera from './img/Category-Camera.jpg';
 import headphone from './img/Category-Headphone.svg';
 import gaming from './img/Category-Gamepad.jpg';
+import { NavLink } from 'react-router';
+import AllProducts from '../AllProducts/AllProducts';
+import Header from '../Header/Header';
 const BrowseCategory = () => {
     return (
         <div className='browseContainer'>
@@ -17,30 +20,42 @@ const BrowseCategory = () => {
             <div className="belowCategory">
                <h1>Browse By Category</h1>
                <div className="mainCategory">
-                    <div className="categories">
+                    
+                        <NavLink to='/products' className='categories'>
                         <img src={phone} alt='phone-img' />
                         <span>Phones</span>
-                    </div>
-                    <div className="categories">
+                        </NavLink>
+                    
+                    
+                        <NavLink to='/products' className='categories'>
                         <img src={computer} alt='computers-img' />
                         <span>Computers</span>
-                    </div>
-                    <div className="categories">
+                        </NavLink>
+                    
+                    
+                        <NavLink to='/products' className='categories'>
                         <img src={smartwatch} alt='smartwatch-img' />
                         <span>SmartWatch</span>
-                    </div>
-                    <div className="categories">
+                        </NavLink>
+                    
+                    
+                        <NavLink to='/products' className='categories'>
                         <img src={camera} alt='camera-img' />
                         <span>Camera</span>
-                    </div>
-                    <div className="categories">
+                        </NavLink>
+                    
+                   
+                        <NavLink to='/products' className='categories'>
                         <img src={headphone} alt='headphone-img' />
                         <span>HeadPhones</span>
-                    </div>
-                    <div className="categories">
+                        </NavLink>
+                    
+                    
+                        <NavLink to='/products' className='categories'>
                         <img src={gaming} alt='gamingpad-img' />
                         <span>Gaming</span>
-                    </div>
+                        </NavLink>
+                    
                 </div> 
             </div>
         </div>

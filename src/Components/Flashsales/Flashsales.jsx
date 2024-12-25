@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './flashsales.css';
 import {Routes, Route, NavLink} from 'react-router-dom';
 import ClipLoader from 'react-spinners/ClipLoader';
+import AllProducts from '../AllProducts/AllProducts';
+import Header from '../Header/Header';
 
 const Flashsales = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -114,11 +116,14 @@ const Flashsales = () => {
         {products.length > 0 ? (
           products.map((product) => (
             <div key={product.id} className='product'>
+              //! Product Detail NavLink
+              <NavLink to={`/product/${product.id}`}>
               <img
                 src={product.images[0] || "https://i.imgur.com/4lTaHfF.jpeg"}
                 alt={product.title}
                 className='product-image'
               />
+              </NavLink>
               <div className="price-tag">
                 <span className="tag-text">%</span>
               </div>
@@ -139,7 +144,7 @@ const Flashsales = () => {
       </div>
 
       <button className='view-all'>
-        View All
+        <NavLink to='/products'>View All</NavLink>
       </button>
       {showMessage && (
         <div
@@ -155,7 +160,9 @@ const Flashsales = () => {
           ✅ Product added to your favorites list!
         </div>
       )}
+     
     </section>
+
   );
 }
 

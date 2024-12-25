@@ -6,30 +6,40 @@ export default function AllProducts() {
   const [loading, setLoading] = useState(true);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [expandedDescriptions, setExpandedDescriptions] = useState({});
 
   useEffect(() => {
-    fetch("https://dummyjson.com/products")
+    
+    fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
       .then((data) => {
-        setAllProducts(data.products);
+        setAllProducts(data);
         setLoading(false);
       })
       .catch((error) => console.error("Error fetching products:", error));
 
 
-    fetch("https://dummyjson.com/products/categories")
+    fetch("https://fakestoreapi.com/products/categories")
       .then((response) => response.json())
       .then((data) => {
-        setCategories(data); 
-        console.log(data)
+        setCategories(["all", ...data]);
       })
       .catch((error) => console.error("Error fetching categories:", error));
   }, []);
 
+
   const filteredProducts =
     selectedCategory === "all"
       ? allProducts
-      : allProducts.filter((product) => product.name === selectedCategory);
+      : allProducts.filter((product) => product.category === selectedCategory);
+
+
+  const toggleDescription = (id) => {
+    setExpandedDescriptions((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
 
   if (loading) {
     return <p>Loading products...</p>;
@@ -37,10 +47,10 @@ export default function AllProducts() {
 
   return (
     <div className={allproducts.container}>
+
       <aside className={allproducts.sidebar}>
         <h3>Categories</h3>
         <ul>
-          
           {categories.map((category) => (
             <li
               key={category}
@@ -51,7 +61,7 @@ export default function AllProducts() {
               }
               onClick={() => setSelectedCategory(category)}
             >
-              {category.name.toUpperCase()}
+              {category}
             </li>
           ))}
         </ul>
@@ -62,7 +72,7 @@ export default function AllProducts() {
           filteredProducts.map((product) => (
             <div key={product.id} className={allproducts.product}>
               <img
-                src={product.images[0] || "https://via.placeholder.com/150"}
+                src={product.image || "https://via.placeholder.com/150"}
                 alt={product.title}
                 className={allproducts.image}
               />
@@ -71,8 +81,13 @@ export default function AllProducts() {
               </div>
               <div className={allproducts.productDetails}>
                 <h4 className={allproducts.productTitle}>{product.title}</h4>
-                <p className={allproducts.productDescription}>
-                  {product.description}
+                <p
+                  className={allproducts.productDescription}
+                  onClick={() => toggleDescription(product.id)}
+                >
+                  {expandedDescriptions[product.id]
+                    ? product.description
+                    : `${product.description.substring(0, 50)}...`}
                 </p>
                 <p className={allproducts.productPrice}>${product.price}</p>
               </div>

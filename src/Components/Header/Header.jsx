@@ -8,6 +8,8 @@ import AllProducts from '../AllProducts/AllProducts';
 import SignUp from '../SignUp/SignUp';
 import Basket from '../Basket/Basket';
 import { Link, NavLink, Route, Routes } from 'react-router';
+//! Product Detail
+import ProductDetail from '../ProductDetail/ProductDetail';
 const Header = () => {
     return (
         <>
@@ -41,6 +43,8 @@ const Header = () => {
     <Route path='/products' element={<AllProducts/>}></Route>
     <Route path='/signup' element={<SignUp/>}></Route>
     <Route path='/basket' element={<Basket/>}></Route>
+    //! Product Detail
+    <Route path="/product/:id" element={<ProductDetail />} />
 </Routes>
 </>
     )

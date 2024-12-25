@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import Flashsales from '../Flashsales/Flashsales';
 import './bestsellingproducts.css'
 export default function BestSellingProducts() {
     const [bestProducts, setBestProducts] = useState([]);
@@ -18,6 +19,19 @@ export default function BestSellingProducts() {
       })
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
+
+  const [showMessage2, setShowMessage2] = useState(false);
+  const handleAddToFavorite2 = (product) => {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    favorites.push(product);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    setShowMessage2(true);
+    console.log('Product added to favorites:', product);
+
+    setTimeout(() => {
+      setShowMessage2(false);
+    }, 3000);
+  };
 
   if (loading2) {
     return <p>Loading products...</p>;
@@ -40,9 +54,7 @@ export default function BestSellingProducts() {
                 className='product-image2'
                 />
     <div className="add-to-card">
-      <span onClick={()=>{
-        handleAddToFavorite()
-      }}>Add to card</span>
+      <span onClick={() => handleAddToFavorite2(product)}>Add to card</span>
     </div>
               <h4 className='product-title'>
                 {product.title}
@@ -61,6 +73,21 @@ export default function BestSellingProducts() {
         )}
 
             </div>
+            {showMessage2 && (
+        <div
+          style={{
+            padding: "8px",
+            backgroundColor: "#ff003c",
+            borderRadius: "4px",
+            position: "absolute",
+            left: "40%",
+            color: "#fff",
+          }}
+        >
+          ✅ Product added to your favorites list!
         </div>
+      )}
+        </div>
+        
     )
 }
