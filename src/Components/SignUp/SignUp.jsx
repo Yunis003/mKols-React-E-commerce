@@ -9,7 +9,7 @@ export default function SignUp() {
         <img src={signupImg} alt="signup" />
       </div>
       <div className={signup.rightSide}>
-        <h1>Create and account</h1>
+        <h1>Create an account</h1>
         <p>Enter your details below</p>
         <form className={signup.formPage}>
             <input type="text" placeholder='Name' />
