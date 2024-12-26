@@ -10,6 +10,14 @@
   flex: 1;
   gap: 20px;
 }
+.empty-wishlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+}
 
 .wishlist-items {
   flex: 2;
@@ -57,7 +65,7 @@
 .btn {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #ff003c;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -72,6 +80,20 @@
   width: 100%;
   margin-top: 20px;
 }
+
+.remove-btn {
+  padding: 5px 10px;
+  background-color: #ff003c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #d32f2f;
+}
+
 @media screen and (max-width:478px){
   .wishlist-container{
     flex-direction: column;

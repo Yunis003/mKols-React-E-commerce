@@ -7,7 +7,7 @@ import About from '../About/About';
 import AllProducts from '../AllProducts/AllProducts';
 import SignUp from '../SignUp/SignUp';
 import Basket from '../Basket/Basket';
-import { Link, NavLink, Route, Routes } from 'react-router';
+import { NavLink, Route, Routes } from 'react-router';
 //! Product Detail
 import ProductDetail from '../ProductDetail/ProductDetail';
 

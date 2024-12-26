@@ -9,7 +9,12 @@ const Basket = () => {
     setFavorites(storedFavorites);
   }, []);
 
-  
+  const handleRemove = (index) => {
+    const updatedFavorites = favorites.filter((_, i) => i !== index);
+    setFavorites(updatedFavorites);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+  };
+
   const totalPrice = favorites.reduce((sum, product) => sum + product.price, 0);
 
   return (
@@ -22,7 +27,6 @@ const Basket = () => {
         </div>
       ) : (
         <div className="wishlist-content">
-
           <div className="wishlist-items">
             {favorites.map((product, index) => (
               <div key={index} className="wishlist-item">
@@ -32,6 +36,7 @@ const Basket = () => {
                   <p>{product.description}</p>
                   <p>${product.price}</p>
                 </div>
+                <button className="btn remove-btn" onClick={() => handleRemove(index)}>Remove</button>
               </div>
             ))}
           </div>

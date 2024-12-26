@@ -10,7 +10,6 @@ export default function AllProducts() {
   const [expandedDescriptions, setExpandedDescriptions] = useState({});
 
   useEffect(() => {
-    
     fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
       .then((data) => {
@@ -18,7 +17,6 @@ export default function AllProducts() {
         setLoading(false);
       })
       .catch((error) => console.error("Error fetching products:", error));
-
 
     fetch("https://fakestoreapi.com/products/categories")
       .then((response) => response.json())
@@ -28,12 +26,10 @@ export default function AllProducts() {
       .catch((error) => console.error("Error fetching categories:", error));
   }, []);
 
-
   const filteredProducts =
     selectedCategory === "all"
       ? allProducts
       : allProducts.filter((product) => product.category === selectedCategory);
-
 
   const toggleDescription = (id) => {
     setExpandedDescriptions((prevState) => ({
@@ -42,19 +38,24 @@ export default function AllProducts() {
     }));
   };
 
+  const addToCart = (product) => {
+    // const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    // favorites.push(product);
+    // localStorage.setItem("favorites", JSON.stringify(favorites));
+    alert(`${product.title} has been added to your cart.`);
+  };
 
   if (loading) {
     return (
       <>
-      <ClipLoader color="#36d7b7" size={100} />
+        <ClipLoader color="#36d7b7" size={100} />
         <p>Please Wait...</p>
-        </>
-    )
+      </>
+    );
   }
 
   return (
     <div className={allproducts.container}>
-
       <aside className={allproducts.sidebar}>
         <h3>Categories</h3>
         <ul>
@@ -83,7 +84,10 @@ export default function AllProducts() {
                 alt={product.title}
                 className={allproducts.image}
               />
-              <div className={allproducts.addToCard}>
+              <div
+                className={allproducts.addToCard}
+                onClick={() => addToCart(product)}
+              >
                 <span>Add to Cart</span>
               </div>
               <div className={allproducts.productDetails}>
