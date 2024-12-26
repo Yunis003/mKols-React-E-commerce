@@ -132,7 +132,7 @@
     background-color: white;
     border-radius: 50%;
   }
-  .product-image:hover ~ .price-tag{
+  a:hover ~ .price-tag{
     transform: rotate(0deg);
 }
 .view-all{
@@ -176,8 +176,24 @@
 
 }
 
+
+@media screen and (max-width:1225px){
+    .products-timer{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px;
+    }
+}
 @media screen and (max-width:1000px){
     .countdown h3{
         font-size: 30px;
+    }
+}
+@media screen and (max-width:684px){
+    .products-timer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
     }
 }
