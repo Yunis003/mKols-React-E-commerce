@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './header.css';
-import Logo from './logo.svg';
+import Logo from './siteLogo.svg';
 import Main from '../MainAll/Main';
 import Contact from '../Contact/Contact';
 import About from '../About/About';
