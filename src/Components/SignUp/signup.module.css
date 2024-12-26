@@ -2,21 +2,18 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap: calc(10vw + 50px); /* Responsive gap based on viewport width */
+    gap: calc(10vw + 50px); 
     margin-top: 50px;
 
   }
   
   .leftSide img {
     width: 100%;
-    /* Adjust image size for smaller screens (optional) */
-    /* @media (max-width: 768px) {
-      width: 70%;
-    } */
+   
   }
   
   .rightSide {
-    height: auto; /* Remove fixed height for better responsiveness */
+    height: auto; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +29,7 @@
   }
   
   .formPage input {
-    width: 100%; /* Use full width for smaller screens */
+    width: 100%; 
     height: 40px;
     border: none;
     border-bottom: 1px solid black;
@@ -67,10 +64,9 @@
     justify-self: center;
   }
   
-  /* Optional media queries for further responsiveness */
   @media (max-width: 768px) {
     .signupContainer {
-      flex-direction: column; /* Stack elements on top of each other for narrow screens */
+      flex-direction: column; 
     }
   
     .leftSide {

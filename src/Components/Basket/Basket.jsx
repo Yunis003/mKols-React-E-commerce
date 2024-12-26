@@ -9,7 +9,7 @@ const Basket = () => {
     setFavorites(storedFavorites);
   }, []);
 
-  // Calculate the total price of all items in the favorites
+  
   const totalPrice = favorites.reduce((sum, product) => sum + product.price, 0);
 
   return (
@@ -22,7 +22,7 @@ const Basket = () => {
         </div>
       ) : (
         <div className="wishlist-content">
-          {/* Wishlist items */}
+
           <div className="wishlist-items">
             {favorites.map((product, index) => (
               <div key={index} className="wishlist-item">
@@ -35,8 +35,6 @@ const Basket = () => {
               </div>
             ))}
           </div>
-
-          {/* Summary Section */}
           <div className="wishlist-summary">
             <h2>Summary</h2>
             <p>Total Items: {favorites.length}</p>
