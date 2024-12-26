@@ -16,7 +16,7 @@
     align-items: center;
 }
 .categories{
-    width: 200px;
+    width: 20%;
     height: 160px;
     display: flex;
     flex-direction: column;
@@ -38,5 +38,24 @@
 @media screen and (max-width:1450px){
     .mainCategory{
         gap: 20px;
+    }
+}
+@media screen and (max-width:1000px){
+    .mainCategory{
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 35px;
+        row-gap: 25px;
+    }
+    .categories{
+        width: 30%;
+    }
+}
+@media screen and (max-width:648px){
+    .mainCategory{
+        flex-direction: column;
+    }
+    .categories{
+        width: 80%;
     }
 }
