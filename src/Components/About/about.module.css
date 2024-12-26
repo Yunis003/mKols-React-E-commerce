@@ -87,3 +87,46 @@ width: 70px;
         background-color: #777777;
     }
 }
+
+@media screen and (max-width:1340px){
+    .leaders{
+        gap: 40px;
+    }
+    .salesSection{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:1250px){
+    .piarSection{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .leaders{
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:800px){
+   .leftSide{
+        font-size: 14px;
+       >h1{
+           font-size: 30px;
+       }
+   }
+   .rightSide img{
+    width: 100%;
+   }
+
+}
+@media screen and (max-width:440px){
+    .leaders img{
+        width: 300px;
+    }
+}
+@media screen and (max-width:380px){
+    .leaders img{
+        width: 280px;
+    }
+}
