@@ -47,3 +47,37 @@
     top: -10px;
     width: 70px;
 }
+@media screen and (max-width:1430px){
+    .between-time, .sugarcane{
+       display: none;
+    }
+}
+@media screen and (max-width:900px){
+    .decor1, .decor2, .decor3{
+        display: none;
+    }
+    .piar{
+        background-color: #ff003c;
+    }
+}
+@media screen and (max-width:750px){
+    .txt_main{
+        font-size: 23px;
+    }
+}
+@media screen and (max-width:595px){
+    .txt_main{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:520px){
+    .txt_main{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:450px){
+    .txt_main{
+        width: 270px;
+        text-align: center;
+    }
+}
