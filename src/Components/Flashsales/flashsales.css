@@ -6,17 +6,27 @@
     gap: 10px;
 }
 .uper{
+    width: 100%;
     display: flex;
-    align-items:center;
+    align-items: center;
     gap: 15px;
     >.red{
         width: 17px;
         height: 40px;
         border-radius: 4px;
-        background-color:#DB4444;
+        background-color: #DB4444;
     }
     >h3{
-        color:#DB4444;
+        color: #DB4444;
+    }
+}
+
+@media (max-width: 1000px) {
+    .uper > .red {
+        width: 20px;
+    }
+    .uper > h3 {
+        font-size: 16px;
     }
 }
 
@@ -164,4 +174,10 @@
 .add-to-card:hover{
     background-color: #DB4444;
 
+}
+
+@media screen and (max-width:1000px){
+    .countdown h3{
+        font-size: 30px;
+    }
 }

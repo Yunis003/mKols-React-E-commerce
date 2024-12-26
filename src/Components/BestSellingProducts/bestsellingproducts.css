@@ -16,3 +16,17 @@
     width: 100%;
     height: 300px;
 }
+@media screen and (max-width:1225px){
+    .bestProducts{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px;
+    }
+}
+@media screen and (max-width:684px){
+    .bestProducts{
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+}
