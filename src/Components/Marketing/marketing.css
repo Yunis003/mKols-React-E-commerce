@@ -1,24 +1,26 @@
-
-.marketing{
+.marketing {
     width: 90%;
     display: flex;
-    justify-content:space-around;
-    align-items:center;
+    justify-content: space-around;
+    align-items: center;
     gap: 90px;
     margin-top: 50px;
-    background-color:#000000;
+    background-color: #000000;
     color: #FFF;
 }
-.leftSection{
+
+.leftSection {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
 }
-.categoris{
-color: #00FF66;
+
+.categoris {
+    color: #00FF66;
 }
-.offer{
+
+.offer {
     background-color: #00FF66;
     padding: 15px 25px;
     display: flex;
@@ -26,33 +28,116 @@ color: #00FF66;
     align-items: center;
     border-radius: 2px;
 }
-.innerTime{
+
+.innerTime {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-.innerTime h1{
+
+.innerTime h1 {
     width: 300px;
 }
-.timer2{
+
+.timer2 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
 }
-.timer2 p{
+
+.timer2 p {
     font-weight: bold;
     width: 40px;
     background-color: #FFF;
     border-radius: 50%;
-    padding:10px 30px;
+    padding: 10px 30px;
     font-size: 11px;
     color: #000000;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
-.jbl{
+
+.jbl {
     filter: drop-shadow(5px 5px 10px #a5a5a5);
+}
+
+@media screen and (max-width: 1200px) {
+    .marketing {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .innerTime h1 {
+        width: 100%;
+    }
+
+    .timer2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .timer2 p {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .offer{
+        justify-self: center;
+        align-self: center;
+    }
+    .categoris{
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .marketing {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .leftSection {
+        align-items: center;
+        text-align: center;
+    }
+
+    .offer {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .innerTime h1 {
+        font-size: 24px;
+    }
+
+    .timer2 p {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+@media screen and (max-width:650px){
+    .rightSection img{
+       width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .marketing {
+        gap: 30px;
+    }
+
+    .innerTime {
+        gap: 20px;
+    }
+
+    .timer2 {
+        gap: 10px;
+    }
+
+    .timer2 p {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
 }
