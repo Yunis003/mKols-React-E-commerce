@@ -39,11 +39,25 @@ const ProductDetail = () => {
       {product ? (
         <>
           <div className="product-image-section">
+            <div className="left-side-image-section">
+              <img
+                src={product.images[1] || "https://i.imgur.com/4lTaHfF.jpeg"}
+                alt={product.title}
+                className="product-detail-image-left"
+              />
+              <img
+                src={product.images[2] || "https://i.imgur.com/4lTaHfF.jpeg"}
+                alt={product.title}
+                className="product-detail-image-left"
+              />
+              
+            </div>
             <img
               src={product.images[0] || "https://i.imgur.com/4lTaHfF.jpeg"}
               alt={product.title}
               className="product-detail-image"
             />
+            
           </div>
           <div className="product-info-section">
             <h1>{product.title}</h1>

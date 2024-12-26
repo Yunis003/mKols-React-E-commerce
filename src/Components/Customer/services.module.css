@@ -59,4 +59,16 @@ width: 70px;
         background-color: #777777;
     }
 }
-
+@media screen and (max-width:1000px){
+   .servicesContainer{
+    width: 600px;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+   }
+}
+@media screen and (max-width:640px){
+   .servicesContainer{
+    flex-direction: column;
+   }
+}

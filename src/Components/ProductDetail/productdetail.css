@@ -6,10 +6,12 @@
   
   .product-image-section {
     flex: 1;
+    display: flex;
+    gap: 20px;
   }
   
   .product-detail-image {
-    max-width: 100%;
+    max-width: 70%;
     border-radius: 8px;
   }
   
@@ -54,4 +56,9 @@
   .back-to-sales:hover {
     text-decoration: underline;
   }
-  
+  .left-side-image-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100px;
+  }

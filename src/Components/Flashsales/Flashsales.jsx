@@ -116,7 +116,6 @@ const Flashsales = () => {
         {products.length > 0 ? (
           products.map((product) => (
             <div key={product.id} className='product'>
-              //! Product Detail NavLink
               <NavLink to={`/product/${product.id}`}>
               <img
                 src={product.images[0] || "https://i.imgur.com/4lTaHfF.jpeg"}

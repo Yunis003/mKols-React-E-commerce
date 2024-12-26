@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import Flashsales from '../Flashsales/Flashsales';
 import './bestsellingproducts.css'
+import { NavLink } from 'react-router-dom';
 export default function BestSellingProducts() {
     const [bestProducts, setBestProducts] = useState([]);
     const [loading2, setLoading2] = useState(true);
@@ -48,11 +49,13 @@ export default function BestSellingProducts() {
             {bestProducts.length > 0 ? (
           bestProducts.map((product) => (
             <div key={product.id} className='product'>
+              <NavLink to={`/product/${product.id}`}>
               <img
                 src={product.images[0] || "https://via.placeholder.com/150"}
                 alt={product.title} 
                 className='product-image2'
                 />
+                </NavLink>
     <div className="add-to-card">
       <span onClick={() => handleAddToFavorite2(product)}>Add to card</span>
     </div>
