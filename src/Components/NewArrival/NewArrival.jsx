@@ -1,9 +1,9 @@
 import React from 'react';
-import newArrival from './newArrival.module.css'; 
+import newArrival from './newarrival.module.css'; 
 import ps5 from './ps-5-slimm.svg'
 import anothers from './anothers.svg'
-import AllProducts from '../AllProducts/AllProducts';
-import Header from '../Header/Header';
+// import AllProducts from '../AllProducts/AllProducts';
+// import Header from '../Header/Header';
 import { NavLink } from 'react-router';
 const NewArrival = () => {
     return (
