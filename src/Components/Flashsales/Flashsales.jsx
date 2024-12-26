@@ -50,11 +50,11 @@ const Flashsales = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products")
+    fetch("https://dummyjson.com/products?products")
       .then((response) => response.json())
       .then((data) => {
         //! fake store let filteredProducts = data.slice(16,21)
-        let filteredProducts = data.slice(11,15)
+        let filteredProducts = data.products.filter(product => product.category === 'fragrances').slice(1,5);
         
         setProducts(filteredProducts);
         setLoading(false);

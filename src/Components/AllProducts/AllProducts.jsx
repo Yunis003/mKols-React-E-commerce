@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import allproducts from "./allproducts.module.css";
+import ClipLoader from 'react-spinners/ClipLoader';
 
 export default function AllProducts() {
   const [allProducts, setAllProducts] = useState([]);
@@ -41,8 +42,14 @@ export default function AllProducts() {
     }));
   };
 
+
   if (loading) {
-    return <p>Loading products...</p>;
+    return (
+      <>
+      <ClipLoader color="#36d7b7" size={100} />
+        <p>Please Wait...</p>
+        </>
+    )
   }
 
   return (

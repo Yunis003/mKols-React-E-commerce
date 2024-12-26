@@ -1,63 +1,109 @@
-header{
+header {
     width: 90%;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     margin-top: 10px;
-
 }
-nav{
+
+nav {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     gap: 10px;
 }
+
 nav ul {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     gap: 45px;
     list-style: none;
-    >a{
-        font-size: 18px;
-        transition: all .2s ease-in;
-        text-decoration: none;
-        color: #000;
-        &:hover{
-            text-decoration: underline;
-            margin-bottom: 5px;
-            color:#DB4444;
-        }
-    }
 }
-.interaction{
+
+nav ul > a {
+    font-size: 18px;
+    transition: all .2s ease-in;
+    text-decoration: none;
+    color: #000;
+}
+
+nav ul > a:hover {
+    text-decoration: underline;
+    margin-bottom: 5px;
+    color: #DB4444;
+}
+
+.interaction {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     gap: 30px;
-    >a{
-        font-size: 25px;
-    }
-    >i{
-        cursor: pointer;
-            font-size: 25px;
-    }
 }
-.lists{
+
+.interaction > a {
+    font-size: 25px;
+}
+
+.interaction > i {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.lists {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     gap: 25px;
-    >a{
-        font-size: 25px;
-    }
-    >i{
-        font-size: 25px;
-        transition: all .2s ease-in;
-        cursor: pointer;
-    
-    }
 }
-.logo{
+
+.lists > a {
+    font-size: 25px;
+}
+
+.lists > i {
+    font-size: 25px;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.logo {
     filter: drop-shadow(0 0 2px #ff003c);
+}
+
+/* Burger menu styles */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: black;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
 }
