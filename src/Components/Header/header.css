@@ -95,7 +95,8 @@ nav ul > a:hover {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: aliceblue;
+    background-color: #FFF;
+    color: #FFF;
     padding: 35px;
     z-index: 999;
     >a{
