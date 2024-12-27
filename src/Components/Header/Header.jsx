@@ -19,7 +19,7 @@ const Header = () => {
     // };
 
    
-    const navUl = document.querySelector('nav ul');
+    const navUl2 = document.querySelector('nav ul');
 
     
     return (
@@ -44,7 +44,7 @@ const Header = () => {
                         <NavLink to='/basket'><i className="fa-regular fa-heart" style={{ color: '#ff0000' }}></i></NavLink>
                     </div>
                 </div>
-                <div className="burger-menu" onClick={()=>{ navUl.classList.toggle('active');}}>
+                <div className="burger-menu" onClick={()=>{ navUl2.classList.toggle('active');}}>
                     <i className="fa-solid fa-bars"></i>
                 </div>
             </header>
