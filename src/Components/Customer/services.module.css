@@ -69,6 +69,7 @@ width: 70px;
 }
 @media screen and (max-width:640px){
    .servicesContainer{
+    width: 300px;
     flex-direction: column;
    }
 }

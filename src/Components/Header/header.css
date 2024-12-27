@@ -71,32 +71,37 @@ nav ul > a:hover {
     filter: drop-shadow(0 0 2px #ff003c);
 }
 
-/* Burger menu styles */
+
 .burger-menu {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 10px;
 }
 
 .burger-menu div {
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 5px;
     background-color: #000;
     margin: 4px 0;
     transition: 0.4s;
 }
+.active{
+    display: flex;
+}
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
     nav ul {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 40%;
         position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: black;
+        top: 130px; 
+        right: 20px;
+        background-color:aliceblue;
         padding: 10px 0;
+        z-index: 1000; 
     }
 
     nav ul.active {
@@ -105,5 +110,15 @@ nav ul > a:hover {
 
     .burger-menu {
         display: flex;
+    }
+
+    nav ul li { 
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
     }
 }

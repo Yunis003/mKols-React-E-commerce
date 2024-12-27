@@ -62,9 +62,9 @@ const ProductDetail = () => {
               <h1>{product.title}</h1>
               <p className="product-description">{product.description}</p>
               <p className="product-price">Price: ${product.price}</p>
-              <button className="add-to-favorite-btn">
+              {/* <button className="add-to-favorite-btn">
                 Add to Favorites
-              </button>
+              </button> */}
               <NavLink to="/" className="back-to-sales">
                 Back to Flash Sales
               </NavLink>

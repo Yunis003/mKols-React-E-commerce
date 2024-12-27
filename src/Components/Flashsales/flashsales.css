@@ -175,6 +175,13 @@
     background-color: #DB4444;
 
 }
+.timeAll{
+    display: flex;
+    justify-content: center;
+
+    align-items:center;
+    gap: 20px;
+}
 
 
 @media screen and (max-width:1225px){
@@ -195,5 +202,31 @@
         justify-content: center;
         align-items: center;
         gap: 50px;
+    }
+}
+@media screen and (max-width:645px){
+    .countdown{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .timeAll{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        align-items:center;
+        gap: 20px;
+    }
+    .number{
+        margin-right: 25px;
+    }
+}
+@media screen and (max-width:465px){
+    .countdown{
+        font-size: 21px;
+    }
+    .timeAll{
+        display: none;
     }
 }

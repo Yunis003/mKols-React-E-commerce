@@ -55,6 +55,7 @@ const Flashsales = () => {
       .then((data) => {
         //! fake store let filteredProducts = data.slice(16,21)
         let filteredProducts = data.products.filter(product => product.category === 'fragrances').slice(1,5);
+        // let filteredProducts = data.slice(0, 4);
         
         setProducts(filteredProducts);
         setLoading(false);
@@ -95,6 +96,7 @@ const Flashsales = () => {
 
       <div className="countdown">
         <h3>Flash Sales</h3>
+        <div className="timeAll">
         <div className="lefter">
           <span className="number" id="days">{timeLeft.days}</span>
         </div>
@@ -109,6 +111,7 @@ const Flashsales = () => {
         <span className="separator">:</span>
         <div>
           <span className="number" id="seconds">{timeLeft.seconds}</span>
+        </div>
         </div>
       </div>
 

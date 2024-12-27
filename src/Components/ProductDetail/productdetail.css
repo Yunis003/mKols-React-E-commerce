@@ -62,3 +62,16 @@
     gap: 10px;
     width: 100px;
   }
+  @media screen and (max-width:1160px){
+    .product-detail-container {
+      flex-direction: column;
+    }
+    
+    .product-image-section {
+      flex: 1;
+    }
+    
+    .product-info-section {
+      flex: 2;
+    }
+  }

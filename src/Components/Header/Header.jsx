@@ -12,12 +12,16 @@ import { NavLink, Route, Routes } from 'react-router';
 import ProductDetail from '../ProductDetail/ProductDetail';
 
 const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+    // const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+    // const toggleMenu = () => {
+    //     setMenuOpen(!menuOpen);
+    // };
 
+   
+    const navUl = document.querySelector('nav ul');
+
+    
     return (
         <>
             <header>
@@ -25,7 +29,7 @@ const Header = () => {
                     <img src={Logo} alt="logo" className='logo' />
                     <span>  </span>
                 </div>
-                <nav className={menuOpen ? 'open' : ''}>
+                <nav className='burger-menu-nav'>
                     <ul>
                         <NavLink to='/'>Home</NavLink>
                         <NavLink to='/contact'>Contact</NavLink>
@@ -40,7 +44,7 @@ const Header = () => {
                         <NavLink to='/basket'><i className="fa-regular fa-heart" style={{ color: '#ff0000' }}></i></NavLink>
                     </div>
                 </div>
-                <div className="burger-menu" onClick={toggleMenu}>
+                <div className="burger-menu" onClick={()=>{ navUl.classList.toggle('active');}}>
                     <i className="fa-solid fa-bars"></i>
                 </div>
             </header>
