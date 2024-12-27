@@ -1,6 +1,7 @@
 import React from 'react';
 import footer from './footer.module.css'
 import download from './download_app.svg'
+import { NavLink } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className={footer.footer}>
@@ -28,16 +29,16 @@ const Footer = () => {
                         <h3 className={footer.footer__title}>Account</h3>
                         <div className={footer.footer__txts}>
                             <p><a href="#" className={footer.links}>My Account</a></p>
-                            <p><a href="#" className={footer.links}>Login/Register</a></p>
-                            <p><a href="#" className={footer.links}>Cart</a></p>
-                            <p><a href="#" className={footer.links}>Shopping</a></p>
+                            <p><NavLink to='/signup' className={footer.links}>Login/Register</NavLink></p>
+                            <p><NavLink to='/basket' className={footer.links}>Cart</NavLink></p>
+                            <p><NavLink to='/products' className={footer.links}>Shopping</NavLink></p>
                         </div>
                     </div>
 
                     <div className={footer.footer__element}>
                         <h3 className={footer.footer__title}>Quick Link</h3>
                         <div className={footer.footer__txts}>
-                            <p><a href="#" className={footer.links}>Contact Us</a></p>
+                            <p><NavLink to='/contact' className={footer.links}>Contact Us</NavLink></p>
                             <p><a href="#" className={footer.links}>Terms Of Use</a></p>
                         </div>
                     </div>

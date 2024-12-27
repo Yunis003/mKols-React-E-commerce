@@ -229,4 +229,8 @@
     .timeAll{
         display: none;
     }
+    .view-all{
+        width: 200px;
+    }
+    
 }

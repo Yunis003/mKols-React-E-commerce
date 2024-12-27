@@ -71,9 +71,15 @@
     .map iframe{
         width: 700px;
     }
+    .map{
+        width: 700px;
+    }
  }
  @media screen and (max-width:780px){
     .map iframe{
+        width: 600px;
+    }
+    .map{
         width: 600px;
     }
  }
@@ -81,14 +87,40 @@
     .map iframe{
         width: 500px;
     }
+    .map{
+        width: 500px;
+    }
  }
     @media screen and (max-width:580px){
         .map iframe{
+            width: 400px;
+        }
+        .map{
             width: 400px;
         }
     }
     @media screen and (max-width:480px){
         .map iframe{
             width: 300px;
+        }
+        .map{
+            width: 300px;
+        }
+        .info{
+            width: 280px;
+            font-size: 10px;
+        }
+    }
+    @media screen and (max-width:380px){
+        .info{
+            justify-content: center;
+            align-items: center;
+            font-size: 8px;
+        }
+        .map iframe{
+            width: 200px;
+        }
+        .map{
+            width: 200px;
         }
     }

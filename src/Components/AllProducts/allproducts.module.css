@@ -182,3 +182,9 @@
     height: 150px;
   }
 }
+@media screen and (max-width:330px){
+  .product{
+      width: 100%;
+  }
+
+}

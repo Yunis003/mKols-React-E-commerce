@@ -8,15 +8,16 @@ import AllProducts from '../AllProducts/AllProducts';
 import SignUp from '../SignUp/SignUp';
 import Basket from '../Basket/Basket';
 import { NavLink, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 //! Product Detail
 import ProductDetail from '../ProductDetail/ProductDetail';
 
 const Header = () => {
-    // const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    // const toggleMenu = () => {
-    //     setMenuOpen(!menuOpen);
-    // };
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
 
    
     const navUl2Ref = document.querySelector('.burger-menu-nav');
@@ -29,14 +30,22 @@ const Header = () => {
                     <img src={Logo} alt="logo" className='logo' />
                     <span>  </span>
                 </div>
-                <nav className='burger-menu-nav'>
+                <nav className='nav-side'>
                     <ul>
-                        <NavLink to='/'>Home</NavLink>
+                    <NavLink to='/'>Home</NavLink>
                         <NavLink to='/contact'>Contact</NavLink>
                         <NavLink to='/about'>About</NavLink>
                         <NavLink to='/products'>Products</NavLink>
                     </ul>
                 </nav>
+                <div className={menuOpen ?  'activate' :'burger-menu-nav'}>
+                        
+                        <NavLink to='/'>Home</NavLink>
+                        <NavLink to='/contact'>Contact</NavLink>
+                       <NavLink to='/about'>About</NavLink>
+                        <NavLink to='/products'>Products</NavLink>
+                
+                </div>
                 <div className="interaction">
                     <NavLink to='/signup'><i className="fa-solid fa-user" style={{ color: '#141414' }}></i></NavLink>
                     <div className="lists">
@@ -45,7 +54,9 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="burger-menu" >
-                    <i className="fa-solid fa-bars" onClick={() => { navUl2Ref.classList.toggle('active'); }}></i>
+                    {/* <i className="fa-solid fa-bars" onClick={() => { navUl2Ref.classList.toggle('active'); }}></i> */}
+                    <i className="fa-solid fa-bars" onClick={()=> toggleMenu()}></i>
+
                 </div>
             </header>
             <Routes>
