@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './header.css';
 import Logo from './siteLogo.svg';
 import Main from '../MainAll/Main';
@@ -7,7 +7,7 @@ import About from '../About/About';
 import AllProducts from '../AllProducts/AllProducts';
 import SignUp from '../SignUp/SignUp';
 import Basket from '../Basket/Basket';
-import { NavLink, Route, Routes } from 'react-router';
+import { NavLink, Route, Routes } from 'react-router-dom';
 //! Product Detail
 import ProductDetail from '../ProductDetail/ProductDetail';
 
@@ -19,7 +19,7 @@ const Header = () => {
     // };
 
    
-    const navUl2 = document.querySelector('nav ul');
+    const navUl2Ref = document.querySelector('.burger-menu-nav');
 
     
     return (
@@ -44,8 +44,8 @@ const Header = () => {
                         <NavLink to='/basket'><i className="fa-regular fa-heart" style={{ color: '#ff0000' }}></i></NavLink>
                     </div>
                 </div>
-                <div className="burger-menu" onClick={()=>{ navUl2.classList.toggle('active');}}>
-                    <i className="fa-solid fa-bars"></i>
+                <div className="burger-menu" >
+                    <i className="fa-solid fa-bars" onClick={() => { navUl2Ref.classList.toggle('active'); }}></i>
                 </div>
             </header>
             <Routes>
@@ -55,7 +55,6 @@ const Header = () => {
                 <Route path='/products' element={<AllProducts />}></Route>
                 <Route path='/signup' element={<SignUp />}></Route>
                 <Route path='/basket' element={<Basket />}></Route>
-                //! Product Detail
                 <Route path="/product/:id" element={<ProductDetail />} />
             </Routes>
         </>
