@@ -9,17 +9,15 @@ Welcome to the **E-Commerce Platform**! This is a modern, responsive, and featur
 - **Product Categories**: Support for multiple categories like electronics, fashion, and more.
 - **Search and Filters**: Advanced search and filtering options for a better shopping experience.
 - **Shopping Cart**: Add, remove, and manage items in your cart.
-- **User Authentication**: Sign-up, login, and secure checkout for registered users.
-- **Payment Integration**: Seamless payment gateway integration.
+- **User Authentication**: Sign-up, login
 - **Product Reviews**: Leave reviews and ratings for products.
 
 ## Tech Stack
 
-- **Frontend**: React, Vite, Tailwind CSS (or your chosen CSS framework)
-- **State Management**: Redux Toolkit or Context API
-- **Backend**: Node.js, Express.js (optional)
-- **Database**: MongoDB or any other database
-- **Deployment**: Vercel, Netlify, or any preferred platform
+- **Frontend**: React, Vite, Module CSS, Material UI, React Packages
+- **State Management**: Context API
+- **Backend**: Node.js
+- **Deployment**:  Netlify
 
 ## Project Structure
 
