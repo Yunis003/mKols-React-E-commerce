@@ -28,9 +28,7 @@ Welcome to the **E-Commerce Platform**! This is a modern, responsive, and featur
 ├── src
 │   ├── assets         # Images and static assets
 │   ├── components     # Reusable React components
-│   ├── pages          # Page components (e.g., Home, Product, Cart)
-│   ├── context        # Context API (if used)
-│   ├── store          # Redux store (if used)
+│   ├── pages          # Page components
 │   ├── utils          # Utility functions
 │   ├── App.jsx        # Main app component
 │   └── main.jsx       # Application entry point
