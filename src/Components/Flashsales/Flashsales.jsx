@@ -14,7 +14,7 @@ const Flashsales = () => {
   });
 
   useEffect(() => {
-    const countdownDate = new Date("Dec 30, 2024 19:23:00").getTime();
+    const countdownDate = new Date("Jun 30, 2025 19:23:00").getTime();
 
     const countdownFunction = setInterval(() => {
       const now = new Date().getTime();
